@@ -1,0 +1,133 @@
+@import "./settings.scss";
+@import "./typeographys.scss";
+
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+  #wrap {
+    #nav {
+      #banner {
+        #banner-img {
+          height: 150px;
+          #banner-text {
+            font-size: 2em;
+            max-width: 400px;
+          }
+        }
+      }
+
+      .navigation-desktop {
+        .navigation {
+          li {
+            margin: 0em 0.2em;
+
+            span {
+              font-size: 0.8em;
+            }
+
+            .sub-nav {
+              li {
+                a {
+                  font-size: 0.75em;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .callout {
+      width: 90%;
+    }
+
+    .filters {
+      .filter {
+        flex: 0 0 50%;
+        margin-top: 10px;
+
+        input {
+          width: 286px;
+        }
+
+        select {
+          width: 300px;
+        }
+      }
+
+      .remove-mobile {
+        display: none;
+      }
+
+      .filter:nth-child(even) {
+        text-align: right;
+      }
+
+      .filter:last-child {
+        margin-top: 10px;
+        width: 100%;
+
+        .refresh {
+          float: none;
+          margin: 10px 2px 10px 0px;
+          width: 76%;
+        }
+      }
+      .date {
+        margin-top: 5px;
+      }
+
+      .filter {
+        flex: 0 0 50%;
+        margin-top: 10px !important;
+
+        .refresh {
+          float: none;
+          display: none;
+          width: 87%;
+        }
+
+        .date {
+          text-align: center;
+        }
+
+        input {
+          width: 86%;
+        }
+
+        select {
+          width: 90%;
+        }
+      }
+
+      .mobile-refresh {
+        color: white;
+        display: block;
+        flex: 0 0 87% !important;
+        margin: 10px auto;
+      }
+
+      .filter:nth-child(even) {
+        text-align: right;
+      }
+
+      .filter:last-child {
+        flex: none;
+        margin-top: 10px;
+        width: 100%;
+      }
+
+      .other {
+        text-align: left !important;
+      }
+    }
+    .contact {
+      .flex-container {
+        align-items: flex-start;
+        flex-direction: column;
+        .flex-box {
+          min-width: 90%;
+          margin: 10px auto;
+        }
+      }
+    }
+  }
+}

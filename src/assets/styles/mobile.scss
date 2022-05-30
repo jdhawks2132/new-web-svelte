@@ -1,0 +1,77 @@
+@import "./settings.scss";
+@import "./typeographys.scss";
+
+@media screen and (max-width: 600px) {
+  .home-page {
+    flex-direction: column;
+
+    a {
+      margin: 0px auto;
+      min-width: 100%;
+    }
+    a:last-child {
+      margin-bottom: 0px;
+    }
+
+    .find-consultant,
+    .apply-consultant {
+      min-height: 200px;
+
+      i {
+        font-size: 3.5em;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      p {
+        margin: 2px;
+      }
+    }
+
+    .find-consultant {
+      display: block;
+      margin: 0 auto;
+    }
+
+    a {
+      margin-bottom: 20px;
+    }
+  }
+
+  #wrap {
+    .filters {
+      .filter:not(.mobile-refresh):not(.remove-mobile) {
+        text-align: center;
+        flex: 0 0 100% !important;
+        width: 100% !important;
+
+        .refresh {
+          display: none;
+          margin: 0 auto;
+        }
+
+        .date {
+          margin-top: 5px;
+          text-align: center;
+        }
+      }
+
+      .remove-mobile {
+        margin-top: 0px;
+      }
+
+      .mobile-refresh {
+        color: white;
+        display: block;
+        flex: 0 0 87% !important;
+        margin: 0 auto;
+      }
+
+      .filter:nth-child(even) {
+        text-align: center !important;
+      }
+    }
+  }
+}
