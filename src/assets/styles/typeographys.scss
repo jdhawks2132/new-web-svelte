@@ -8,39 +8,51 @@
 
 // Taken from txssc.txstate.edu
 
-$announcement: "nimbus-sans", sans-serif;
+$announcement: 'nimbus-sans', sans-serif;
 $default: Arial, Helvetica, sans-serif;
-$navigation: "news-gothic-std", sans-serif;
+$navigation: 'news-gothic-std', sans-serif;
 $sans-serif: $navigation;
-$serif: "ff-meta-serif-web-pro", serif;
-$headings: "adelle", serif;
-$law: "Courier New", arial, helvetica, sans-serif;
-$times: "ff-meta-serif-web-pro", "Times New Roman", Times, serif;
+$serif: 'ff-meta-serif-web-pro', serif;
+$headings: 'adelle', serif;
+$law: 'Courier New', arial, helvetica, sans-serif;
+$times: 'ff-meta-serif-web-pro', 'Times New Roman', Times, serif;
 
-p,
+body {
+	font-family: Poppins;
+	margin: 0;
+	font-size: 1.1em;
+	background: var(--bg-color);
+}
+
 ul,
-ol {
-  font-weight: 500;
-  line-height: 1.8;
-  margin-bottom: 10px;
-  font-size: 19px;
+li,
+p,
+h1,
+h2,
+h3,
+h4 {
+	margin: 0;
+	padding: 0;
+}
+ul {
+	list-style-type: none;
 }
 
 ul,
 ol {
-  font-family: $serif;
-  font-weight: 500;
+	font-family: $serif;
+	font-weight: 500;
 }
 
 h1,
 h2 {
-  font-weight: 600;
+	font-weight: 600;
 }
 
 .serif {
-  font-family: $serif;
+	font-family: $serif;
 }
 
 .adelle {
-  font-family: $headings;
+	font-family: $headings;
 }

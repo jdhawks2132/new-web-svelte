@@ -2,26 +2,160 @@
 @import './typeographys.scss';
 
 .event-list {
-	margin-top: 40px;
+	margin: 40px;
 	display: grid;
+	text-align: center;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: auto;
 	grid-gap: 20px;
 }
 
-.cards a {
-	background-color: #fff;
+.event-card {
+	display: flex;
+	flex-direction: column;
+	margin: none;
+	background-color: #eeeeee;
 	/* padding: 16px; */
 	border-radius: 10px;
-	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.05);
+	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
 	text-decoration: none;
 	color: inherit;
-	height: 5cm;
+
+	h2.event-header {
+		border-radius: 6px 6px 0 0;
+		padding: 0.5em;
+		color: #fff;
+
+		&.past {
+			background-color: $dark-gray;
+		}
+
+		&.virtual {
+			background: lighten($maroon, 5%);
+			margin: none;
+		}
+
+		&.in-person {
+			background: lighten($spring-lake-blue, 5%);
+		}
+	}
+
+	.event-time {
+		color: #fff;
+		padding: 5px;
+
+		&.past {
+			background-color: $charcoal;
+		}
+
+		&.virtual {
+			background: $maroon;
+		}
+
+		&.in-person {
+			background: darken($spring-lake-blue, 5%);
+		}
+	}
+
+	.virtual-address {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 10px;
+
+		i {
+			font-size: 2.5em;
+			margin-right: 0.5em;
+		}
+
+		p {
+			font-size: 1.25em;
+		}
+	}
+
+	.in-person-address {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 10px;
+
+		i {
+			font-size: 2.5em;
+			margin-right: 0.5em;
+
+			&:hover {
+				color: $spring-lake-blue;
+			}
+		}
+
+		p {
+			font-size: 1.25em;
+		}
+
+		.event-address {
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+		}
+	}
 }
+
 .cards h2 {
 	color: white;
 	padding: 30px;
 	font-size: 2vw;
 	background-color: $maroon;
 	text-align: center;
+}
+
+.event-status {
+	margin: 5px 0;
+	color: #fff;
+	padding: 10px;
+	border-radius: 6px;
+
+	&.past,
+	&.closed {
+		background-color: red;
+	}
+
+	&.open {
+		color: #fff;
+		background-color: green;
+
+		&:hover {
+			background-color: darken(green, 5%);
+		}
+	}
+}
+
+.btn {
+	&.events-home-btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 40px auto;
+		width: 5cm;
+		padding: 10px;
+		border-radius: 6px;
+		background-color: $light-maroon;
+		p {
+			color: #fff;
+		}
+
+		&:hover {
+			background-color: $maroon;
+		}
+	}
+}
+
+.no-trainings {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	h1 {
+		padding: 10px;
+	}
 }

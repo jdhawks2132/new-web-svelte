@@ -21,9 +21,10 @@
 </script>
 
 <script>
-	import { goto } from '$app/navigation';
+	import Masthead from '$lib/components/mastead.svelte';
+	import EventCard from '$lib/components/event-components/eventCard.svelte';
+	import EventHomeButton from '$lib/components/event-components/eventHomeButton.svelte';
 	export let trainings;
-	let today = new Date().getTime();
 </script>
 
 <svelte:head>
@@ -32,30 +33,23 @@
 	<meta name="keywords" content="Texas School Safety, Texas School Safety {trainings.name}" />
 </svelte:head>
 
-<div>
-	<ul>
-		{#if trainings.length > 0}
-			{#each trainings as training}
-				<li>
-					<h2>{training.date_start}</h2>
-					<h3>{training.time}</h3>
-					{#if today > new Date(training.date_start).getTime()}
-						<p>PAST</p>
-					{:else if training.full_or_closed === 'OPEN'}
-						<a href={training.forms_url}><button>{training.full_or_closed}</button></a>
-					{:else}
-						<p>{training.full_or_closed}</p>
-					{/if}
-				</li>
-			{/each}
-		{:else}
-			<h2>There are Currently No Trainings Scheduled</h2>
-			<h3>Check Back Soon!</h3>
-		{/if}
-		<li>
-			<button alt="return to events page" on:click={() => goto('/events')}
-				>Return to Events Page</button
-			>
-		</li>
-	</ul>
+<div class="content">
+	{#if trainings.length > 0}
+		<Masthead text={trainings[0].event.name} />
+	{/if}
 </div>
+
+{#if trainings.length > 0}
+	<div class="event-list">
+		{#each trainings as training}
+			<EventCard {training} />
+		{/each}
+	</div>
+{:else}
+	<div class="no-trainings">
+		<h1>There are Currently No Trainings Scheduled</h1>
+		<h3>Check Back Soon!</h3>
+	</div>
+{/if}
+
+<EventHomeButton />

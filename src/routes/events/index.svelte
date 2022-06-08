@@ -1,6 +1,5 @@
 <script>
 	import Masthead from '$lib/components/mastead.svelte';
-	import EventCard from '$lib/components/event-components/eventCard.svelte';
 	import { events } from '../../stores/events.js';
 </script>
 
@@ -15,6 +14,7 @@
 </div>
 
 <div class="content">
+	
 	<ul>
 		<li class="event-list">
 			{#each $events as event}

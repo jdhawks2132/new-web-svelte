@@ -7,7 +7,7 @@
 <footer>
 	<div class="footer-contact">
 		<p class="copyright">
-			&copy; 2013-<span class="js-replace-date">2016</span> Texas School Safety Center, all rights reserved.
+			&copy; 2013-<span class="js-replace-date">2022</span> Texas School Safety Center, all rights reserved.
 		</p>
 		<ul class="social">
 			<li>
@@ -53,7 +53,7 @@
 
 		<div class="footer-phone-address">
 			<div class="footer-detail">
-				<h4>Phone</h4>
+				<p class="detail-header">Phone</p>
 				<p>
 					Toll Free: 877.304.2727 <br />
 					Local: 512.245.8082
@@ -61,7 +61,7 @@
 			</div>
 
 			<div class="footer-detail">
-				<h4>Mailing Address</h4>
+				<p class="detail-header">Mailing Address</p>
 				<p>
 					Texas School Safety Center<br />
 					Texas State University<br />
