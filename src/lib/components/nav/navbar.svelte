@@ -20,7 +20,7 @@
 		</li>
 		<li>
 			<a
-				href="http://registry.txssc.com/"
+				href="http://registry.txssc.txstate.edu/"
 				alt="link to txssc registry webpage"
 				target="_blank"
 				rel="noopener noreferrer">REGISTRY</a

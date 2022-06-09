@@ -10,6 +10,32 @@
 	grid-gap: 20px;
 }
 
+.grid-card-link {
+	a {
+		text-decoration: none;
+	}
+}
+.event-grid {
+	text-decoration: none;
+	display: grid;
+	grid-template-areas:
+		'thumb title'
+		'thumb description';
+	grid-template-columns: 1fr 3fr;
+	grid-template-rows: auto auto;
+	grid-gap: 20px;
+	margin: 20px;
+
+	.event-grid-image img {
+		width: 200px;
+	}
+}
+
+.event-index-list {
+	display: flex;
+	flex-direction: column;
+}
+
 .event-card {
 	display: flex;
 	flex-direction: column;

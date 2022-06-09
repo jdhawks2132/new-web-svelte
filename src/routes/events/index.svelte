@@ -1,5 +1,6 @@
 <script>
 	import Masthead from '$lib/components/mastead.svelte';
+	import EventParentCard from '$lib/components/event-components/eventParentCard.svelte';
 	import { events } from '../../stores/events.js';
 </script>
 
@@ -14,16 +15,9 @@
 </div>
 
 <div class="content">
-	
-	<ul>
-		<li class="event-list">
-			{#each $events as event}
-				<a
-					href={`/events/${event.id}`}
-					alt={`link to ${event.name} trainings`}
-					eventName={event.name}>{event.name}</a
-				>
-			{/each}
-		</li>
-	</ul>
+	<div class="event-index-list">
+		{#each $events as event}
+			<EventParentCard {event} />
+		{/each}
+	</div>
 </div>
