@@ -11,3 +11,6 @@
 	<slot />
 </main>
 <Footer />
+
+<style>
+</style>

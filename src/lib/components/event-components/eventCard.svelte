@@ -1,5 +1,4 @@
 <script>
-	import '../../../assets/styles/events.scss';
 	import EventCardButton from './eventCardButton.svelte';
 	export let training;
 	console.log(training);
