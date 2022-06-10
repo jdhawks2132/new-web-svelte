@@ -29,6 +29,14 @@
 	.event-grid-image img {
 		width: 200px;
 	}
+
+	.event-grid-text {
+		.event-grid-header {
+			font-size: 1.5em;
+			font-weight: 600;
+			margin-bottom: 10px;
+		}
+	}
 }
 
 .event-index-list {
