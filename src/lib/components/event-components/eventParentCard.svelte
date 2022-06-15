@@ -9,7 +9,7 @@
 		</div>
 		<div class="event-grid-text">
 			<div class="event-grid-header">
-				<h3>{event.name}</h3>
+				<h2>{event.name}</h2>
 			</div>
 			<div class="event-grid-desc">
 				<p>{event.desc}</p>

@@ -48,7 +48,7 @@
 {:else}
 	<div class="no-trainings">
 		<h1>There are Currently No Trainings Scheduled</h1>
-		<h3>Check Back Soon!</h3>
+		<h2>Check Back Soon!</h2>
 	</div>
 {/if}
 

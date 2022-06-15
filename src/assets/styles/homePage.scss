@@ -1,0 +1,55 @@
+.home-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto;
+	grid-template-areas:
+		'feat 	feat 	feat 	hero 	hero 	hero'
+		'feat 	feat 	feat 	hero 	hero 	hero'
+		'artheader artheader 	artheader artheader artheader artheader'
+		'art1 	art1 	art2 	art2 	art3 	art3'
+		'eventheader eventheader eventheader eventheader eventheader eventheader'
+		'event 	event event event event event'
+		'toolheader toolheader toolheader toolheader toolheader toolheader'
+		'tool 	tool 	tool 	tool 	tool 	tool';
+	grid-gap: 20px;
+
+	.featured {
+		grid-area: feat;
+	}
+	.hero {
+		grid-area: hero;
+	}
+
+	.art-header {
+		grid-area: artheader;
+	}
+	.art1 {
+		grid-area: art1;
+	}
+	.art2 {
+		grid-area: art2;
+	}
+	.art3 {
+		grid-area: art3;
+	}
+
+	.event-header {
+		grid-area: eventheader;
+	}
+
+	.home-events-grid {
+		grid-area: event;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+
+	.tool-header {
+		grid-area: toolheader;
+	}
+
+	.home-tools-grid {
+		grid-area: tool;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+}
