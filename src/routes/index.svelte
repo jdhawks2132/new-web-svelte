@@ -50,9 +50,6 @@
 			<h2 class="title">Featured Video</h2>
 			<img src="https://txssc.txstate.edu/assets/images/video_thumb_srp.jpg" alt="srp video link" />
 		</div>
-		<div class="art-header">
-			<h2 class="title">Featured Articles</h2>
-		</div>
 		<article class="art1">
 			<Subheader title="Mandatory Drills for Schools" subtitle="Resource" />
 			<p>
@@ -106,7 +103,6 @@
 
 <style>
 	p {
-		margin-left: 10px;
 		font-size: 1.2rem;
 		font-family: 'adele', serif;
 		font-weight: 500;
@@ -114,13 +110,12 @@
 	}
 
 	.hero > img {
-		padding: 20px;
+		padding: 20px 0;
 		width: 100%;
 	}
 
 	.title {
 		color: #565656;
-		margin-left: 10px;
 		font-size: 1.5rem;
 		font-family: 'adele', serif;
 		font-weight: 500;

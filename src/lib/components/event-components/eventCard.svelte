@@ -1,9 +1,13 @@
 <script>
 	import EventCardButton from './eventCardButton.svelte';
 	export let training;
-	console.log(training);
+	const d = new Date(training.date_start)
+	let year = d.getUTCFullYear();
+	let month = d.getUTCMonth();
+	let day = d.getUTCDate();
+	let trainingNow = new Date(year, month, day, 17);
 	let today = new Date().getTime();
-	const isPast = today > new Date(training.date_start).getTime();
+	const isPast = today > trainingNow.getTime();
 	const isVirtual = training.in_person === false;
 
 	const formatDate = (date) => {

@@ -10,7 +10,7 @@
 
 <style>
 	hgroup {
-		margin: 10px;
+		margin: 20px 0;
 	}
 
 	h2 {
