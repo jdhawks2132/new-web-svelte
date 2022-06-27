@@ -1,7 +1,28 @@
+<script context="module">
+	export async function load({ fetch }) {
+		const res = await fetch(`http://localhost:3000/api/v1/events`);
+		const events = await res.json();
+
+		if (res.ok) {
+			return {
+				props: {
+					events
+				}
+			};
+		}
+		return {
+			status: 301,
+			redirect: {
+				path: '/events'
+			}
+		};
+	}
+</script>
+
 <script>
 	import Masthead from '$lib/components/mastead.svelte';
 	import EventParentCard from '$lib/components/event-components/eventParentCard.svelte';
-	import { events } from '../../stores/events.js';
+	export let events;
 </script>
 
 <svelte:head>
@@ -16,7 +37,7 @@
 
 <div class="content">
 	<div class="event-index-list">
-		{#each $events as event}
+		{#each events as event}
 			<EventParentCard {event} />
 		{/each}
 	</div>
