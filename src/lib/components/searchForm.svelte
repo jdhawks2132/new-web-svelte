@@ -1,7 +1,6 @@
 <script>
 	import { updateSearchTerms } from '../../stores/search.js';
 	import { goto } from '$app/navigation';
-	// filter through the searchTerms array and return all the searchTerms.term that match the query and add them to the filteredTerms array
 	let newQuery = '';
 
 	const handleSubmit = (query) => {
