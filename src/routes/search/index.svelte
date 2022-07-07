@@ -20,7 +20,8 @@
 </script>
 
 <script>
-	import { searchTerm } from '../../stores/search';
+	import { searchTerm, updateSearchTerms } from '../../stores/search';
+	import { goto } from '$app/navigation'
 	import Masthead from '$lib/components/mastead.svelte';
 	console.log($searchTerm);
 	export let termsList;
@@ -38,11 +39,12 @@
 
 <div class="content">
 	<Masthead text={'Search Results'} />
-	{#if searchTermsList}
+	{#if searchTermsList.length > 0}
 		{#each searchTermsList as term}
 			<div class="search-term">
 				<h2>{term.title}</h2>
-				<a href={term.location}>{term.title}</a>
+				<a href={term.location}>{term.location}</a>
+				<p>Weight: {term.weight}</p>
 			</div>
 		{/each}
 	{:else}
