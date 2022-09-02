@@ -1,7 +1,7 @@
 <script>
 	import EventCardButton from './eventCardButton.svelte';
 	export let training;
-	const d = new Date(training.date_start)
+	const d = new Date(training.date_start);
 	let year = d.getUTCFullYear();
 	let month = d.getUTCMonth();
 	let day = d.getUTCDate();
@@ -29,10 +29,14 @@
 			return 'in-person';
 		}
 	};
+
+	const parseURL = (url) => {
+		return url.split('=')[1];
+	};
 </script>
 
 {#if training.enabled}
-	<div class="event-card">
+	<div id={parseURL(training.forms_url)} class="event-card">
 		<h2 class={`event-header ${classAssignment(isPast, isVirtual)}`}>
 			{formatDate(training.date_start)}
 		</h2>
