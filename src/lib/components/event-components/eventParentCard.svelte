@@ -17,3 +17,10 @@
 		</div>
 	</div>
 </a>
+
+<style>
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+</style>
