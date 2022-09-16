@@ -6,10 +6,7 @@
 	const handleSubmit = (query) => {
 		updateSearchTerms(query);
 		newQuery = '';
-		// goto '/search' unless you are already on the '/search' page
-		if (window.location.pathname !== '/search') {
-			goto('/search');
-		}
+		goto('/search?q=' + query);
 	};
 </script>
 

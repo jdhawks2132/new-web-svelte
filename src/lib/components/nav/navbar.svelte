@@ -26,8 +26,6 @@
 				rel="noopener noreferrer">REGISTRY</a
 			>
 		</li>
-		<li>
-			<SearchForm />
-		</li>
+		<li><a href="/search" alt="link to the search page">SEARCH</a></li>
 	</ul>
 </nav>
